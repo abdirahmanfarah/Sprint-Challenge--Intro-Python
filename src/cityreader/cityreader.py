@@ -27,6 +27,8 @@ class City:
 # should not be loaded into a City object.
 cities = []
 
+# Why isn't this wroking?
+
 
 def cityreader(cities=[]):
     with open('cities.csv', newline='') as csvfile:
