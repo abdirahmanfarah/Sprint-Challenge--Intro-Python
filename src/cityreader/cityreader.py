@@ -32,9 +32,10 @@ cities = []
 
 def cityreader(cities=[]):
     with open('cities.csv', newline='') as csvfile:
-        reader = csv.DictReader(csvfile)
+        reader = csv.reader(csvfile)
+        next(reader)
         for row in reader:
-            city = City(row[0], row[3], row[4])
+            city = City(row[0], float(row[3]), float(row[4]))
             cities.append(city)
 
         return cities
